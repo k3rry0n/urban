@@ -30,8 +30,8 @@ def find_meaning(input_string):
 	meanings = re.findall("<div class='meaning'>([^<]+)", search_result.text)
 	examples = re.findall("class='example'>([^<]+)", search_result.text)
 
-	print(print_inversion(input_string))
-	print(print_bold("Meaning I found: "))
+	print(" ")
+	print(print_bold("\033[5mMeaning I found for {}\033[25m".format(input_string)))
 	
 	ex = 0
 	
