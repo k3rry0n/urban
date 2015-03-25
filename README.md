@@ -9,10 +9,10 @@ You can install it via pip:
 
 Using
 
-> ./urban.py some_arg
+> ./launch.py some_arg
 
 with phrase it would looks like 
 
-> ./urban.py "Some phrase here"
+> ./launch.py "Some phrase here"
 
 
