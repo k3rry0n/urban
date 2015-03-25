@@ -36,9 +36,6 @@ class Urban(object):
 		meanings = re.findall("<div class='meaning'>([^<]+)", search_result.text)
 		examples = re.findall("class='example'>([^<]+)", search_result.text)
 
-		print(" ")
-		print("\033[5mMeaning I found for {}\033[25m\n".format(input_string))
-		
 		ex = 0
 		
 		for i in meanings:
