@@ -7,5 +7,5 @@ string, status = n.communicate()
 a = urban.Urban(string)
 meanings = a.get_meanings() 
 meanings, examples = meanings
-result = "{}\n============\nEXAMPLE: {}".format(meanings[0], examples[0])
+result = "{}\n============\nEXAMPLE: {}".format(meanings[0], examples[0]).replace("'", "")
 os.system("notify-send '<b>{}</b>' '{}'".format(string.decode(), result))
