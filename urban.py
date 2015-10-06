@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import requests, re
+import logging
 
 class Urban(object):
 
@@ -38,8 +39,12 @@ class Urban(object):
 
 		ex = 0
 		
-		for i in meanings:
+		try:
+			for i in meanings:
 
-			self.meanings.append("{}".format(i.replace("\n", "").replace("&#39;", "'").replace("&quot;", '"').replace("\r", "")))
-			self.examples.append("{}".format(examples[ex].replace("\n", "").replace("&#39;", "'").replace("&quot;", '"').replace("\r", "")))
-			ex += 1
+				self.meanings.append("{}".format(i.replace("\n", "").replace("&#39;", "'").replace("&quot;", '"').replace("\r", "")))
+				self.examples.append("{}".format(examples[ex].replace("\n", "").replace("&#39;", "'").replace("&quot;", '"').replace("\r", "")))
+				ex += 1
+		except:
+			print("No Meanings found. Now exiting...")
+			exit()
